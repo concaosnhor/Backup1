@@ -33,15 +33,15 @@
 
     Menu::~Menu() {}
 
-    void Menu::draw(sf::RenderWindow& window) {
-        if (useTexture || background.getFillColor() != sf::Color::Transparent) {
-            window.draw(background);
-        }
+        void Menu::draw(sf::RenderWindow& window) {
+            if (useTexture || background.getFillColor() != sf::Color::Transparent) {
+                window.draw(background);
+            }
 
-        for (int i = 0; i < numberOfItems; i++) {
-            window.draw(menu[i]);
+            for (int i = 0; i < numberOfItems; i++) {
+                window.draw(menu[i]);
+            }
         }
-    }
 
     void Menu::MoveUp() {
         if (selectedItemIndex - 1 >= 0) {
